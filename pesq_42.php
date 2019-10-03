@@ -254,11 +254,13 @@ if (mysql_num_rows($sql) > 0)
     <thead>
       <tr >
        
-      <th>ESTAÇÃO.</th>
-          <th>POSIÇÃO</th>
+      <th>ESTAÇÃO</th>
+      <th>ESTAÇÃO B</th>
+          <th>FO</th>
+          <th>QDT FO</th>
           <th>CABO/ROTA</th>
         
-            <th>OCUPAÇÃO</th> <!-- ROTA -->
+            <th>MEDIDA</th> <!-- ROTA -->
             <th>ENLACE</th>
             <th>OBS</th>
              
@@ -301,8 +303,10 @@ if (mysql_num_rows($sql) > 0)
     <tbody>
       <tr class="success">
       
- <td> <?php echo $dado ["estacao"];  ?></td>     
+ <td> <?php echo $dado ["estacao"];  ?></td> 
+ <td> <?php echo $dado ["estacao_b"];  ?></td>      
 <td> <?php echo $dado ["porta"];  ?></td>
+<td> <?php echo $dado ["qtd_fo"];  ?></td>
 <td> <?php echo $dado ["cabo"];  ?></td>
 <td> <?php echo $dado ["ocupacao"];  ?></td>
 <td> <?php echo $dado ["enlace"];  ?></td>
@@ -343,7 +347,7 @@ if (mysql_num_rows($sql) > 0)
     <input type="text" class="form-control" id="porta" value="<?php echo $dado["porta"] ?>" name="porta" readonly  required>
     <label for="email">CABO / ROTA: </label>
     <input type="text" class="form-control"  value="<?php echo $dado["cabo"] ?>" name="cabo"   required>
-    <label for="email">OCUPAÇÃO: </label>
+    <label for="email">MEDIDA: </label>
     <input type="text" class="form-control"  value="<?php echo $dado["ocupacao"] ?>" name="ocupacao"   required>
     <label for="email">ENLACE: </label>
     <input type="text" class="form-control" value="<?php echo $dado["enlace"] ?>" name="enlace"   required>

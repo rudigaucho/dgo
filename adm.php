@@ -105,8 +105,10 @@ if(!isset($_SESSION["login"]) || ($_SESSION["acesso"] != 'ADM' ))
         <div class="collapse navbar-collapse navbar-ex1-collapse">
                 <ul class="nav navbar-nav side-nav">
                     <li class="active">
-                        <a href="pesq_log.php"><i class="fa fa-fw fa-user"></i> LOG'S</a>
+                        <a href="pesq_log.php"><i class="fa fa-fw fa-search"></i> LOG'S</a>
                         <a href="cad_usu.php"><i class="fa fa-fw fa-user"></i> USUÁRIOS</a>
+                        <a href="upload.php"><i class="fa fa-fw fa-upload"></i> UPLOAD ANUF</a>
+                        <a href="upload_est.php"><i class="fa fa-fw fa-upload"></i> UPLOAD ESTACAO</a>
                     </li>
                    
                    
