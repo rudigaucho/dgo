@@ -219,7 +219,7 @@ height:70px;
 
      <?php
 
-     $sql = mysql_query ("select * from estacao where anuf = 42 order by estacao" );
+     $sql = mysql_query ("select * from anuf where anuf = 42 group by estacao" );
 // $sql2 = mysql_query ("select count(*) as conta  from relatorio where gra = '".$busca."' and data BETWEEN  '$data 00:00:00' and '$data 23:59:00' order by data desc   " );
 
   

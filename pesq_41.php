@@ -219,7 +219,7 @@ height:70px;
 
      <?php
 
-     $sql = mysql_query ("select * from estacao where anuf = 41 order by estacao" );
+     $sql = mysql_query ("select * from anuf where anuf = 41 group by estacao" );
 // $sql2 = mysql_query ("select count(*) as conta  from relatorio where gra = '".$busca."' and data BETWEEN  '$data 00:00:00' and '$data 23:59:00' order by data desc   " );
 
   
@@ -243,7 +243,7 @@ if (mysql_num_rows($sql) > 0)
 <?php } } ?>
 
   </select>
-    
+ 
     
     <button type="submit"  name="submit" id="submit" class="btn btn-default">Busca</button> <br><br><br><br>
   </form>
@@ -273,6 +273,7 @@ if (mysql_num_rows($sql) > 0)
 
       </tr>
     </thead>
+    
   
   <?php
   if (isset($_POST ['submit']) )
@@ -284,7 +285,10 @@ $estacao = $_POST['estacao'];
 
 
 
-$sql = mysql_query ("select * from anuf where estacao = '$estacao' and anuf = '41' order by porta asc" );
+
+
+
+$sql = mysql_query ("select * from anuf where estacao = '$estacao'   and anuf = '41' order by porta asc" );
 // $sql2 = mysql_query ("select count(*) as conta  from relatorio where gra = '".$busca."' and data BETWEEN  '$data 00:00:00' and '$data 23:59:00' order by data desc   " );
 
   

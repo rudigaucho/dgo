@@ -11,9 +11,18 @@ if(!isset($_SESSION["login"]) || ($_SESSION["acesso"] != 'ADM' ))
 }
 
 
+$sql = mysql_query ("select MAX(ID) as id from anuf" );
+$row = mysql_num_rows($sql);
 
- 
+if (mysql_num_rows($sql) > 0)
 
+{
+  while ($dado = mysql_fetch_assoc($sql))
+  
+  {
+    $id = $dado["id"];
+  }  
+}
 
 ?>
 
@@ -128,7 +137,7 @@ if(!isset($_SESSION["login"]) || ($_SESSION["acesso"] != 'ADM' ))
                         </h1>
                         <ol class="breadcrumb">
                             <li class="active">
-                                <i class="fa fa-dashboard"></i> Dashboard
+                                <i class="fa fa-dashboard"></i> Último id: <?php echo $id; ?>
                             </li>
                         </ol>
                     </div>
